@@ -2,6 +2,7 @@
 
 import sys
 
+
 def print_arguments():
     if len(sys.argv) == 1:
         print("No arguments provided!")

@@ -2,6 +2,7 @@
 
 import math
 
+
 def to_float(input_str: str) -> float:
     try:
         return float(input_str)
@@ -28,7 +29,10 @@ def get_player_pos() -> tuple[float, float, float]:
             pass
 
 
-def distance(p1: tuple[float, float, float], p2: tuple[float, float, float]) -> float:
+def distance(
+        p1: tuple[float, float, float],
+        p2: tuple[float, float, float],
+        ) -> float:
     return math.sqrt(
         (p2[0] - p1[0]) ** 2 + (p2[1] - p1[1]) ** 2 + (p2[2] - p1[2]) ** 2
     )
@@ -39,8 +43,14 @@ if __name__ == "__main__":
     print("Get a first set of coordinates")
     first_tuple = get_player_pos()
     print(f"Got a first tuple: ({first_tuple})")
-    print(f"It includes: X={first_tuple[0]}, Y={first_tuple[1]}, Z={first_tuple[2]}")
+    print(
+        "It includes: "
+        f"X={first_tuple[0]}, Y={first_tuple[1]}, Z={first_tuple[2]}"
+        )
     print(f"Distance to center: {distance(first_tuple, (0.0, 0.0, 0.0))}")
     print("Get a second set of coordinates")
     second_tuple = get_player_pos()
-    print(f"Distance between the 2 sets of coordinates: {distance(first_tuple, second_tuple)}")
+    print(
+        "Distance between the 2 sets of coordinates: "
+        f"{distance(first_tuple, second_tuple)}"
+        )
