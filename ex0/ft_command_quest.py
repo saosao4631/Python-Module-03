@@ -3,7 +3,7 @@
 import sys
 
 
-def print_arguments():
+def print_arguments() -> None:
     if len(sys.argv) == 1:
         print("No arguments provided!")
     else:
