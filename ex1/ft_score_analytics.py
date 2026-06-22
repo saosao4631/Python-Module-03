@@ -3,7 +3,7 @@
 import sys
 
 
-if __name__ == "__main__":
+def main() -> None:
     args = sys.argv[1:]
     if not args:
         print("No scores provided. Usage: ...")
@@ -23,6 +23,7 @@ if __name__ == "__main__":
             "No scores provided. "
             "Usage: python3 ft_score_analytics.py <score1> <score2> ..."
         )
+        return
 
     players = len(scores)
     total = sum(scores)
@@ -35,3 +36,6 @@ if __name__ == "__main__":
     print(f"High score: {max_score}")
     print(f"Low score: {min_score}")
     print(f"Score range: {max_score - min_score}")
+
+if __name__ == "__main__":
+    main()
